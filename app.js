@@ -124,10 +124,10 @@ app.post("/failure", function(req, res) {
 
 
 
+var port = process.env.PORT || 3000;
 
-
-app.listen(3000, function () {
-    console.log("listening at port 3000");
+app.listen(Number(port), "0.0.0.0", function () {
+    console.log(`listening on port: ${port}`);
 })
 
 
